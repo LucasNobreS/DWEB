@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucas Couto Daniel Nobre da Silva">
+    <meta name="description" content="Pesquisa sobre APIs e Integrações">
+    <meta name="keywords" content="API, REST, GraphQL, SOAP, HTTP, Fatec Sorocaba">
+    <link rel="stylesheet" href="atividade3.css">
+    <title>APIs e Integrações - FATEC Sorocaba</title>
+</head>
+
+<body>
+    <header class="header-1">
+        <nav class="nav">
+            <div>
+                <a href="#home" class="nav-logo">
+                    FATEC Sorocaba
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Início</a></li>
+                    <li class="nav-item"><a href="#sumario" class="nav-link">Sumário</a></li>
+                    <li class="nav-item"><a href="#introducao" class="nav-link">Introdução</a></li>
+                    <li class="nav-item"><a href="#conceitos" class="nav-link">Conceitos</a></li>
+                    <li class="nav-item"><a href="#tipos" class="nav-link">Tipos</a></li>
+                    <li class="nav-item"><a href="#elementos" class="nav-link">Elementos</a></li>
+                    <li class="nav-item"><a href="#ferramentas" class="nav-link">Ferramentas</a></li>
+                    <li class="nav-item"><a href="#exemplos" class="nav-link">Exemplos</a></li>
+                    <li class="nav-item"><a href="#conclusao" class="nav-link">Conclusão</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="home" id="home">
+            <div class="home-data">
+                <h1 class="home-title">
+                    <span class="home-title-color">FATEC SOROCABA</span><br>
+                    ANÁLISE E DESENVOLVIMENTO DE SISTEMAS
+                </h1>
+                <h2>APIs E INTEGRAÇÕES: CONCEITOS, TIPOS, FERRAMENTAS E EXEMPLOS</h2>
+                <br>
+                <p><strong>Autores:</strong> Lucas Couto Daniel Nobre da Silva</p>
+                <p>Sorocaba – SP | 2026</p>
+                <a href="#introducao" class="button">Iniciar Leitura</a>
+            </div>
+        </section>
+
+        <section class="section" id="sumario">
+            <h2 class="section-title">SUMÁRIO</h2>
+            <div class="bd-grid">
+                <ol>
+                    <li><a href="#introducao">1 INTRODUÇÃO</a></li>
+                    <li><a href="#conceitos">2 CONCEITOS FUNDAMENTAIS</a>
+                        <ul>
+                            <li>2.1 O que é uma API</li>
+                            <li>2.2 Como ocorre uma integração por API</li>
+                            <li>2.3 API, endpoint, requisição e resposta</li>
+                        </ul>
+                    </li>
+                    <li><a href="#tipos">3 TIPOS E ESTILOS DE APIs</a>
+                        <ul>
+                            <li>3.1 REST</li>
+                            <li>3.2 GraphQL</li>
+                            <li>3.3 SOAP</li>
+                            <li>3.4 APIs públicas, privadas e de parceiros</li>
+                        </ul>
+                    </li>
+                    <li><a href="#elementos">4 ELEMENTOS TÉCNICOS DE UMA API</a>
+                        <ul>
+                            <li>4.1 Métodos HTTP</li>
+                            <li>4.2 Códigos de status</li>
+                            <li>4.3 Formatos de dados</li>
+                            <li>4.4 Autenticação e autorização</li>
+                        </ul>
+                    </li>
+                    <li><a href="#ferramentas">5 FERRAMENTAS PARA DESENVOLVIMENTO E INTEGRAÇÃO</a>
+                        <ul>
+                            <li>5.1 Postman</li>
+                            <li>5.2 OpenAPI e Swagger</li>
+                            <li>5.3 Plataformas de gerenciamento de APIs</li>
+                        </ul>
+                    </li>
+                    <li><a href="#exemplos">6 EXEMPLOS PRÁTICOS</a>
+                        <ul>
+                            <li>6.1 Pagamentos</li>
+                            <li>6.2 Mapas e localização</li>
+                            <li>6.3 Sistemas empresariais</li>
+                            <li>6.4 Serviços em nuvem</li>
+                        </ul>
+                    </li>
+                    <li><a href="#vantagens">7 VANTAGENS E DESAFIOS</a></li>
+                    <li><a href="#conclusao">8 CONCLUSÃO</a></li>
+                    <li><a href="#referencias">REFERÊNCIAS</a></li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="section" id="introducao">
+            <h2 class="section-title">1 INTRODUÇÃO</h2>
+            <p>
+                As Application Programming Interfaces (APIs), ou Interfaces de Programação de Aplicações, são interfaces que permitem que diferentes componentes de software utilizem funcionalidades ou dados de outros componentes de maneira padronizada[cite: 1]. A ideia central de uma API é abstrair parte da complexidade de uma implementação, oferecendo ao desenvolvedor uma forma definida de solicitar uma operação ou recurso[cite: 1]. A documentação da Mozilla Developer Network (MDN) apresenta as APIs como construções que permitem utilizar funcionalidades complexas por meio de interfaces mais simples (MDN WEB DOCS, 2026a)[cite: 1].
+            </p>
+            <br>
+            <p>
+                No contexto da Web, as APIs são especialmente importantes porque possibilitam a comunicação entre aplicações, servidores e serviços externos[cite: 1]. O protocolo HTTP fornece o modelo de comunicação baseado em requisição e resposta, sendo amplamente utilizado para comunicação entre sistemas e para acesso programático a APIs (MDN WEB DOCS, 2026b)[cite: 1]. Assim, uma aplicação pode consumir um serviço especializado sem precisar implementar internamente todas as funcionalidades oferecidas por esse serviço[cite: 1].
+            </p>
+            <br>
+            <p>
+                A integração por APIs está presente em diferentes áreas da tecnologia, como pagamentos, mapas, autenticação, comércio eletrônico, sistemas empresariais, serviços em nuvem e aplicações móveis[cite: 1]. Este trabalho apresenta os principais conceitos relacionados às APIs e às integrações, os principais tipos e estilos, os elementos técnicos envolvidos, ferramentas utilizadas no desenvolvimento e exemplos de aplicação prática[cite: 1].
+            </p>
+        </section>
+
+        <section class="section" id="conceitos">
+            <h2 class="section-title">2 CONCEITOS FUNDAMENTAIS</h2>
+            <h3>2.1 O que é uma API</h3>
+            <p>
+                Uma API pode ser compreendida como um contrato ou interface que define como um software consumidor pode interagir com outro software[cite: 1]. O consumidor não precisa conhecer a implementação interna do serviço; precisa conhecer a interface disponibilizada, as operações possíveis, os dados exigidos e o formato das respostas[cite: 1]. Essa abstração facilita a reutilização de funcionalidades e a comunicação entre sistemas desenvolvidos com tecnologias diferentes[cite: 1].
+            </p>
+            <br>
+            <h3>2.2 Como ocorre uma integração por API</h3>
+            <p>
+                Em uma integração típica, um sistema consumidor envia uma requisição ao serviço que disponibiliza a API[cite: 1]. A requisição pode indicar a operação desejada, o recurso que será acessado, parâmetros, cabeçalhos de controle e, em operações que enviam dados, um corpo de requisição[cite: 1]. O servidor processa a solicitação e retorna uma resposta com dados e informações sobre o resultado da operação[cite: 1].
+            </p>
+            <br>
+            <h3>2.3 API, endpoint, requisição e resposta</h3>
+            <p>
+                Um endpoint é um ponto de acesso da API associado a determinado recurso ou operação[cite: 1]. A requisição é a mensagem enviada pelo consumidor ao endpoint, enquanto a resposta é a mensagem retornada pelo servidor[cite: 1].
+            </p>
+        </section>
+
+        <section class="section" id="tipos">
+            <h2 class="section-title">3 TIPOS E ESTILOS DE APIs</h2>
+            <h3>3.1 REST</h3>
+            <p>
+                REST (Representational State Transfer) é um estilo arquitetural utilizado para projetar sistemas distribuídos[cite: 1]. Em APIs RESTful, recursos são identificados por URLs e operações são realizadas por métodos HTTP[cite: 1].
+            </p>
+            <br>
+            <h3>3.2 GraphQL</h3>
+            <p>
+                GraphQL é uma linguagem de consulta para APIs e também um ambiente de execução para atender essas consultas[cite: 1]. Uma característica importante é permitir que o consumidor especifique os dados desejados[cite: 1].
+            </p>
+            <br>
+            <h3>3.3 SOAP</h3>
+            <p>
+                SOAP (Simple Object Access Protocol) é um protocolo de comunicação baseado em mensagens estruturadas e tradicionalmente associado ao XML[cite: 1].
+            </p>
+            <br>
+            <h3>3.4 APIs públicas, privadas e de parceiros</h3>
+            <p>
+                APIs públicas são disponibilizadas para consumidores externos; APIs privadas são utilizadas internamente por uma organização; e APIs de parceiros são disponibilizadas a organizações ou sistemas previamente autorizados[cite: 1].
+            </p>
+        </section>
+
+        <section class="section" id="elementos">
+            <h2 class="section-title">4 ELEMENTOS TÉCNICOS DE UMA API</h2>
+            
+            <h3>4.1 Métodos HTTP</h3>
+            <table class="projects-table">
+                <thead>
+                    <tr>
+                        <th>Método</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>GET</strong></td>
+                        <td>Solicita a representação de um recurso[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>POST</strong></td>
+                        <td>Submete dados a um recurso[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PUT</strong></td>
+                        <td>Substitui a representação atual de um recurso[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PATCH</strong></td>
+                        <td>Realiza uma modificação parcial[cite: 1].</td>
+                    </tr>
+                    <tr>
+                        <td><strong>DELETE</strong></td>
+                        <td>Solicita a remoção de um recurso[cite: 1].</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+
+            <h3>4.2 Códigos de Status</h3>
+            <ul class="skills-text">
+                <li><strong>1xx:</strong> Informações[cite: 1]</li>
+                <li><strong>2xx:</strong> Sucesso (Ex: 200 OK, 201 Created)[cite: 1]</li>
+                <li><strong>3xx:</strong> Redirecionamentos[cite: 1]</li>
+                <li><strong>4xx:</strong> Erros do Cliente (Ex: 400 Bad Request, 401 Unauthorized, 404 Not Found)[cite: 1]</li>
+                <li><strong>5xx:</strong> Erros do Servidor (Ex: 500 Internal Server Error)[cite: 1]</li>
+            </ul>
+        </section>
+
+        <section class="section" id="ferramentas">
+            <h2 class="section-title">5 FERRAMENTAS PARA DESENVOLVIMENTO</h2>
+            <p><strong>5.1 Postman:</strong> Plataforma utilizada no desenvolvimento e teste de APIs, permitindo construir requisições HTTP e analisar respostas[cite: 1].</p>
+            <br>
+            <p><strong>5.2 OpenAPI e Swagger:</strong> OpenAPI é uma especificação para descrever APIs HTTP de forma padronizada, enquanto Swagger é o ecossistema de ferramentas associado[cite: 1].</p>
+            <br>
+            <p><strong>5.3 Plataformas de Gerenciamento:</strong> Apoiam o ciclo de vida completo da API, como design, segurança, controle de acesso e monitoramento[cite: 1].</p>
+        </section>
+
+        <section class="section" id="exemplos">
+            <h2 class="section-title">6 EXEMPLOS PRÁTICOS</h2>
+            <dl>
+                <dt><strong>Pagamentos</strong></dt>
+                <dd>Criação de cobranças e atualização de status de pedidos em e-commerce[cite: 1].</dd>
+                <dt><strong>Mapas e Localização</strong></dt>
+                <dd>Cálculo de rotas, estimativa de distâncias e localização de endereços[cite: 1].</dd>
+                <dt><strong>Sistemas Empresariais</strong></dt>
+                <dd>Integração entre vendas, estoque e setor financeiro[cite: 1].</dd>
+                <dt><strong>Serviços em Nuvem</strong></dt>
+                <dd>Automação de armazenamento, processamento e segurança[cite: 1].</dd>
+            </dl>
+        </section>
+
+        <section class="section" id="vantagens">
+            <h2 class="section-title">7 VANTAGENS E DESAFIOS</h2>
+            <p>
+                <strong>Vantagens:</strong> Reutilização de funcionalidades, interoperabilidade entre sistemas e separação de responsabilidades[cite: 1].<br>
+                <strong>Desafios:</strong> Alterações incompatíveis, indisponibilidade do serviço, gerenciamento de credenciais e limites de requisições[cite: 1].
+            </p>
+        </section>
+
+        <section class="section" id="conclusao">
+            <h2 class="section-title">8 CONCLUSÃO</h2>
+            <p>
+                As APIs constituem um mecanismo fundamental para a comunicação entre aplicações e serviços[cite: 1]. Compreender APIs e integrações é essencial para o desenvolvimento de sistemas modernos, pois permite construir aplicações capazes de se comunicar com outros sistemas de maneira padronizada, controlada e escalável[cite: 1].
+            </p>
+        </section>
+
+        <section class="section" id="referencias">
+            <h2 class="section-title">REFERÊNCIAS</h2>
+            <p class="skills-text">
+                GRAPHQL. Learn GraphQL: The Query. 2026[cite: 1].<br>
+                GOOGLE CLOUD. O que é o gerenciamento de APIs? 2026[cite: 1].<br>
+                MATHIJSSEN, Max; OVEREEM, Michiel; JANSEN, Slinger. Identification of Practices and Capabilities in API Management. arXiv, 2020[cite: 1].<br>
+                MAVROUDEAS, Georgios et al. Learning GraphQL Query Costs. arXiv, 2021[cite: 1].<br>
+                MDN WEB DOCS. Documentações e Referências HTTP/APIs. Mozilla Developer Network, 2025-2026[cite: 1].<br>
+                OPENAPI INITIATIVE. OpenAPI Initiative Publications. 2026[cite: 1].
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p id="footer-title">Atividade Acadêmica - FATEC Sorocaba</p>
+        <p>&copy; 2026 Todos os direitos reservados</p>
+    </footer>
+</body>
+
+</html>
