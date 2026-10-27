@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Jokenpô Moderno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="jogo-container">
+        <h1>Jokenpô </h1>
+
+        <div class="botoes-container">
+            <button onclick="jokenpo('pedra')">Pedra </button>
+            <button onclick="jokenpo('papel')">Papel </button>
+            <button onclick="jokenpo('tesoura')">Tesoura </button>
+        </div>
+
+        <div class="placar-container">
+            <div class="escolhas">
+                <p>Você: <span id="txt-jogador">-</span></p>
+                <p>Computador: <span id="txt-computador">-</span></p>
+            </div>
+            <div id="resultado-final">Escolha uma opção para começar!</div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
