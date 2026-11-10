@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 9</title>
+</head>
+<body>
+
+    <h1>Atividade 9 - JavaScript</h1>
+
+    <script src="script.js"></script>
+
+    <script>
+        let num1 = Number(prompt("Digite o primeiro número:"));
+        let num2 = Number(prompt("Digite o segundo número:"));
+        let num3 = Number(prompt("Digite o terceiro número:"));
+
+        document.write("<h3>1 - Maior número:</h3>");
+        document.write(maiorNumero(num1, num2, num3));
+
+        document.write("<h3>2 - Ordem crescente:</h3>");
+        document.write(ordemCrescente(num1, num2, num3));
+
+        let texto = prompt("Digite uma palavra ou frase:");
+
+        document.write("<h3>3 - Palíndromo:</h3>");
+        document.write(verificarPalindromo(texto));
+
+        let palavra1 = prompt("Digite a primeira palavra:");
+        let palavra2 = prompt("Digite a segunda palavra:");
+
+        document.write("<h3>4 - Subconjunto:</h3>");
+        document.write(verificarSubconjunto(palavra1, palavra2));
+
+        let data = prompt("Digite uma data (DD/MM/AAAA):");
+
+        document.write("<h3>5 - Dia da semana:</h3>");
+        document.write(diaDaSemana(data));
+    </script>
+
+</body>
+</html>
